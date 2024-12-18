@@ -106,6 +106,8 @@ class gadget_fifotr(gadgettop):
                         helper.convert_single_transaction_of_some_state(self.transstate_post['balls'],'f','d')
                 if (simphase == 1 and self.logicstate_pre['push'][0] == '1' and self.logicstate_pre['wr_ptr'][1] == '1' and self.logicstate_pre['wr_ptr'][2] == '1'):
                         helper.convert_single_transaction_of_some_state(self.transstate_post['balls'],'f','e')
+                if (simphase == 1 and self.logicstate_pre['push'][0] == '0' and self.logicstate_post['up_valid'][0] == '0' and helper.check_transaction_of_some_state_exists(self.transstate_post['balls'],'f')):
+                        helper.convert_single_transaction_of_some_state(self.transstate_post['balls'],'f','g')            #this covers ERROR condition when MASTER drops VALID without sucessful hadshaking
                 if (simphase == 2 and self.logicstate_post['up_valid'][0] == '0' and helper.check_transaction_of_some_state_exists(self.transstate_post['balls'],'f')):
                         helper.convert_single_transaction_of_some_state(self.transstate_post['balls'],'f','g')
                 #PROCESS TRANSACTIONS (BALLS) IN G-POCKET
@@ -178,7 +180,7 @@ class gadget_fifotr(gadgettop):
                 elif (self.pocketsstate_post['a'][0] == '0'):
                     pass
                 else:
-                    self._wctx.addstr(4,34, u'\u00D7'.encode('utf-8'), curses.color_pair(1))
+                    self._wctx.addstr(4,34, u'\u00D7'.encode('utf-8'), curses.color_pair(2))
                 ####B-POCKET####
                 if (self.pocketsstate_post['b'][0] == '1'):
                     self._wctx.addstr(1,27, u'\u274B'.encode('utf-8'), curses.color_pair(2))

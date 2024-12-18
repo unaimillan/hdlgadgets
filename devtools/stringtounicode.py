@@ -19,9 +19,32 @@ test_str = 'Uncomment string'
 #test_str = '                ┃  xxxxxx  ❋ ┃                '#7
 #test_str = '                ┡━━━━━━━━━━━━┩                '#8
 #test_str = '                │000      000│                '#9
-#test_str = '⸳⸳⸳⸳!valid⸳⸳⸳⸳⸳❭│push   empty│───────valid───❭'#10
-#test_str = '❮───ready───────│full     pop│❬⸳⸳⸳⸳⸳!ready⸳⸳⸳⸳'#11
+#test_str = '････!valid･････❭│push   empty│───────valid───❭'#10
+#test_str = '❮───ready───────│full     pop│❬･････!ready････'#11
 #test_str = '                └────────────┘                '#12
+
+
+
+#test_str = '                ┏━━━━━━━━━━━━┓                '
+#test_str = '             ┏━━❱            ┃                '
+#test_str = '             ┃  ┃─────◥◤─────┃                '
+#test_str = '             ┃  ┃            ┃                '
+#test_str = '━━━━      ━━━┛  ┃─────◥◤─────┃  ┏━━━      ━━━❱'
+#test_str = '                ┃            ┃  ┃             '
+#test_str = '                ┃─────◥◤─────┃  ┃             '
+#test_str = '                ┃            ❱━━┛             '
+#test_str = '                ┡━━━━━━━━━━━━┩                '
+#test_str = '                │            │                '
+#test_str = '                │            │                '
+#test_str = '                │            │                '
+#test_str = '                └────────────┘                '
+#test_str = 'SFTREG'
+
+#test_str =  '                │[  ]┌─┬─┬─┬─┤               '
+
+#test_str =  '                │      │ │ │ │               '
+#test_str =  '                 └────┴─┴─┴─┴─┘               '
+
 
 
 #            00000000001
@@ -84,30 +107,30 @@ test_str = 'Uncomment string'
 #test_str = 'NO_MATCH!!!'
 #test_str = ''
 
-test_str = '-----------'
+#test_str = '-----------'
 
 
 #####UP######################
 #            ━━━━000000━◉╾╯
 #UP_VALID
 #            ────valid──────❯
-#            ⸳⸳⸳⸳!valid⸳⸳⸳⸳⸳❭
+#            ････!valid･････❭
 #            ××××?valid×××××❭
 
 #UP_READY
 #            ❮───ready───────
-#            ❬⸳⸳⸳!ready⸳⸳⸳⸳⸳⸳
+#            ❬･･･!ready･･････
 #            ❬×××?ready××××××
 
 #####DOWN####################
 #              ╰╼━━000000━━━❱
 #DOWN_VALID
 #            ───────valid───❯
-#            ⸳⸳⸳⸳⸳⸳!valid⸳⸳⸳❭
+#            ･･････!valid･･･❭
 #            ××××××?valid×××❭
 #DOWN_READY
 #            ❮──────ready────
-#            ❬⸳⸳⸳⸳⸳!ready⸳⸳⸳⸳
+#            ❬･････!ready････
 #            ❬×××××?ready××××
 
 
@@ -122,6 +145,22 @@ test_str = '-----------'
 #test_str = '║ Clock                 - "ENTER-key"        ║'#5
 #test_str = '║ Quit                  - "ESC-key"          ║'#6
 #test_str = '╚════════════════════════════════════════════╝'#7
+
+
+#test_str = '║ down_ready_a ○        - "s-sym"            ║'#4
+#test_str = 'FIFO_B'#4
+#test_str = '"A-sym"'#4
+#test_str = '"Z,X,C,V,B,N-syms"'
+#test_str = 'z Z'
+#test_str = '❱'
+
+#test_str = '┬&[]'
+#test_str = '･･❬･･････'
+#test_str = '──❮──────'
+#test_str = '─╮│╰─❮──╮──────╯'
+
+test_str = '_RLBK'
+
 
 # printing original String
 print("The original string is : " + str(test_str))
